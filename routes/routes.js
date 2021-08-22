@@ -111,6 +111,28 @@ router.post('/update/:id', upload, (req, res) => {
   );
 });
 
+router.get('/delete/:id', (req, res) => {
+  let id = req.params.id;
+  User.findByIdAndRemove(id, (error, user) => {
+    if (user.image != '') {
+      try {
+        fs.unlinkSync(`./uploads/${user.image}`);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    if (error) {
+      res.json({ message: err.message, type: 'denger' });
+    } else {
+      req.session.message = {
+        type: 'success',
+        message: 'User deleted.',
+      };
+      res.redirect('/');
+    }
+  });
+});
+
 router.get('/about', (req, res) => {
   res.render('about', { title: 'About' });
 });
