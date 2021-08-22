@@ -1,5 +1,15 @@
 <%- include('layout/header') %>
 	<div class="container mx-auto mt-8">
+		<div class="my-4">
+			<% if (message) { %>
+				<div class="<%= message.type == 'success' ? 'text-blue-700 border-blue-400 bg-blue-100' : 'text-red-700 border-red-400 bg-red-100' %> border px-4 py-3 rounded relative" role="alert">
+					<span class="block sm:inline"><%= message.message %></span>
+					<span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer">
+						<i class="fas fa-times"></i>
+					</span>
+				</div>
+			<% } %>
+		</div>
 		<table class="table-fixed w-full text-center">
 			<thead>
 				<tr>
