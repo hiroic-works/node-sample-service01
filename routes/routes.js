@@ -23,7 +23,16 @@ let upload = multer({
  * routing
  */
 router.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+  User.find().exec((error, users) => {
+    if (error) {
+      resjson({ message: err.message });
+    } else {
+      res.render('index', {
+        title: 'Home',
+        users,
+      });
+    }
+  });
 });
 
 router.get('/add', (req, res) => {
