@@ -20,6 +20,29 @@ const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Connected database'));
 
+/**
+ * middlewares
+ */
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(
+  session({
+    secret: 'my-secret-key',
+    saveUninitialized: true,
+    resave: false,
+  })
+);
+app.use((req, res, next) => {
+  res.locals.message = req.session.message;
+  delete req.session.message;
+  next();
+});
+
+/**
+ * template engine
+ */
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
   res.send('Hello');
 });
