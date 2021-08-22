@@ -27,22 +27,20 @@ full stack sample form CRUD project (MongoDB Express EJS Node.js)
 - createdAt: Date
 - updatedAt: Date
 
-### post API
-
-#### fetch all users
+### fetch all users
 
 `GET`: `/`
 
-#### add user
+### add user
 
 `POST`: `/add`
 
-#### update user
+### update user
 
 `POST`: `/update/:id`
 
 ※update 時、サーバー側でファイル関連の更新比較をするため、クライアント側では form の hidden で「old_image」キーとして現在反映中のファイル名をセットしてサーバーにリクエストさせるようにする。
 
-#### delete user
+### delete user
 
 `GET`: `/delete/:id`
