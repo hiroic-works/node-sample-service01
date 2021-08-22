@@ -1,4 +1,4 @@
-# mevn-sample-blog01
+# node-sample-service01
 
 full stack sample form CRUD project (MongoDB Express EJS Node.js)
 
