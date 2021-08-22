@@ -1,0 +1,36 @@
+<%- include('layout/header') %>
+	<div class="flex items-center mt-24">
+		<div class="container mx-auto max-w-md shadow-md hover:shadow-lg transition duration-300">
+			<div class="py-12 p-10 bg-white rounded-xl">
+				<form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+					<div class="mb-6 text-2xl font-bold">
+						Add User
+					</div>
+					<div class="mb-6">
+						<label class="mr-4 text-gray-700 font-bold inline-block mb-2" for="name">Name</label>
+						<input name="name" type="text" class="border bg-gray-100 py-2 px-4 w-full outline-none focus:ring-2 focus:ring-indigo-400 rounded" placeholder="Your name" required />
+					</div>
+					<div class="mb-6">
+						<label class="mr-4 text-gray-700 font-bold inline-block mb-2" for="name">Email</label>
+						<input name="email" type="email" class="border bg-gray-100 py-2 px-4 w-full outline-none focus:ring-2 focus:ring-indigo-400 rounded" placeholder="@email" required />
+					</div>
+					<div class="mb-6">
+						<label class="mr-4 text-gray-700 font-bold inline-block mb-2" for="name">Phone</label>
+						<input name="phone" type="tel" class="border bg-gray-100 py-2 px-4 w-full outline-none focus:ring-2 focus:ring-indigo-400 rounded" placeholder="Enter Phone" required />
+					</div>
+					<div class="">
+						<label class="mr-4 text-gray-700 font-bold inline-block mb-2" for="name">Select Image</label>
+						<div class="overflow-hidden relative w-full mb-4">
+							<button class="bg-indigo-600 rounded-md hover:bg-indigo-500 transition duration-300 text-white font-bold py-2 px-4 w-full inline-flex items-center">
+								<i class="fa fa-upload" aria-hidden="true"></i>
+								<span class="ml-2">Choose File</span>
+							</button>
+							<input name="image" type="file" class="cursor-pointer absolute block opacity-0 pin-r pin-t" required />
+						</div>
+					</div>
+					<button type="submit" class="w-full mt-6 text-indigo-50 font-bold bg-indigo-600 py-3 rounded-md hover:bg-indigo-500 transition duration-300">Add User</button>
+				</form>
+			</div>
+		</div>
+	</div>
+<%- include('layout/footer') %>
