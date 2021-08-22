@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>
+		<%- title %>
+	</title>
+</head>
+<body>
+	<nav class="block bg-blue-500 p-6 md:flex md:items-center md:justify-between md:flex-wrap md:mb-0">
+		<div class="mb-4 text-white text-center md:flex md:items-center md:flex-shrink-0 md:mb-0">
+			<span class="font-semibold text-xl tracking-tight">SAMPLE SITE</span>
+		</div>
+		<div class="text-sm text-center mb:flex-1 mb:flex mb:justify-end">
+			<a href="/" class="block inline-block mt-0 text-blue-200 hover:text-white mr-4">
+				<i class="fas fa-home me-1"></i> HOME
+			</a>
+			<a href="/add" class="block inline-block mt-0 text-blue-200 hover:text-white mr-4">
+				<i class="fas fa-user-plus me-1"></i> Add User
+			</a>
+			<a href="/about" class="block inline-block mt-0 text-blue-200 hover:text-white mr-4">
+				<i class="fas fa-globe me-1"></i> About
+			</a>
+			<a href="/contact" class="block inline-block mt-0 text-blue-200 hover:text-white">
+				<i class="fas fa-envelope me-1"></i> Contact
+			</a>
+		</div>
+	</nav>
