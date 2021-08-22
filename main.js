@@ -43,9 +43,10 @@ app.use((req, res, next) => {
  */
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-  res.send('Hello');
-});
+/**
+ * routing
+ */
+app.use('', require('./routes/routes'));
 
 /**
  * server start
